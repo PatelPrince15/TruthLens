@@ -1,36 +1,48 @@
-<html>
+<<html>
 <head>
-    <title>Dashboard</title>
-    <link rel="stylesheet" href="style.css">
+  
+  <title>TruthLens - Dashboard</title>
+  <link rel="stylesheet" href="style.css">
+  <script src="script.js" defer></script>
 </head>
-<body>
+<body class="gradient-bg" onload="loadDashboard()">
 
-<div class="nav">
-    <a href="dashboard.html">Home</a>
-    <a href="history.html">History</a>
-    <a href="stats.html">Stats</a>
-</div>
 
-<div class="container">
-    <h1>🕵️ TruthLens</h1>
+  <nav class="navbar">
+    <div class="nav-left">🔍 TruthLens</div>
+    <div class="nav-right">
+      <a href="index.html" class="nav-btn">Home</a>
+      <a href="dashboard.html" class="nav-btn">Dashboard</a>
+      <a href="history.html" class="nav-btn">History</a>
+      <a href="stats.html" class="nav-btn">Stats</a>
+      <button class="nav-btn" onclick="logout()">Logout</button>
+    </div>
+  </nav>
 
-    <textarea id="textInput" placeholder="Type your statement..."></textarea>
-
+  <div class="container fade-in">
+    <h2 id="welcome">Enter Your Statement</h2>
+    <textarea id="statement" placeholder="Enter your statement here..."></textarea>
     <div class="buttons">
-        <button onclick="detectLie()">Detect</button>
-        <button onclick="resetText()" class="reset">Reset</button>
+      <button onclick="analyzeText()" class="main-btn">Detect Lie</button>
+      <button onclick="resetInput()" class="main-btn">Reset</button>
     </div>
 
-    <p id="loading" class="hidden">🤖 Analyzing...</p>
-
-    <div class="meter">
-        <div class="fill" id="fillBar"></div>
+    <div id="analysis">
+      <h3 id="result"></h3>
+      <progress id="progress" value="0" max="100"></progress>
+      <p id="personality"></p>
+      <p id="mood"></p>
+      <ul id="reasons"></ul>
     </div>
+  </div>
 
-    <p id="result"></p>
-    <p id="highlight"></p>
-</div>
+  
+  <div id="toast">Analysis complete!</div>
 
-<script src="script.js"></script>
+  
+  <footer class="footer">
+    <p>© 2026 TruthLens | Educational Simulation Project</p>
+  </footer>
+
 </body>
 </html>
