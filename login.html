@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>TruthLens - Login</title>
+  <link rel="stylesheet" href="style.css">
+  <script src="script.js" defer></script>
+</head>
+<body class="gradient-bg">
+
+  <!-- Navbar -->
+  <nav class="navbar">
+    <div class="nav-left">🔍 TruthLens</div>
+    <div class="nav-right">
+      <a href="index.html" class="nav-btn">Home</a>
+      <a href="history.html" class="nav-btn">History</a>
+      <a href="stats.html" class="nav-btn">Stats</a>
+    </div>
+  </nav>
+
+  <!-- Login Form -->
+  <div class="login-container fade-in">
+    <h2>Create / Login Account</h2>
+    <form onsubmit="handleLogin(event)">
+      <input type="text" id="username" placeholder="Enter Username" required>
+      <input type="email" id="email" placeholder="Enter Email" required>
+      <input type="password" id="password" placeholder="Enter Password" required>
+      <button type="submit" class="main-btn">Login</button>
+    </form>
+  </div>
+
+  <!-- Footer -->
+  <footer class="footer">
+    <p>© 2026 TruthLens | Educational Simulation Project</p>
+  </footer>
+
+</body>
+</html>
