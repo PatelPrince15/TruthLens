@@ -6,20 +6,17 @@ body {
     padding: 40px;
 }
 
-/* Container */
 .container {
     width: 60%;
     margin: auto;
     animation: fadeIn 1s ease-in-out;
 }
 
-/* Heading */
 h1 {
     font-size: 40px;
     animation: slideDown 1s ease;
 }
 
-/* Input */
 input, textarea {
     width: 100%;
     padding: 10px;
@@ -35,7 +32,6 @@ input:focus, textarea:focus {
     box-shadow: 0 0 10px #ff416c;
 }
 
-/* Buttons */
 button {
     padding: 10px 20px;
     margin: 10px;
@@ -60,7 +56,6 @@ button:active {
     background: gray;
 }
 
-/* Navbar */
 .nav {
     background: rgba(0,0,0,0.6);
     padding: 12px;
@@ -89,7 +84,6 @@ button:active {
     width: 100%;
 }
 
-/* Meter */
 .meter {
     width: 100%;
     height: 20px;
@@ -106,20 +100,17 @@ button:active {
     transition: width 0.8s ease-in-out;
 }
 
-/* Result */
 #result {
     margin-top: 20px;
     font-size: 22px;
     font-weight: bold;
 }
 
-/* Highlight */
 #highlight {
     margin-top: 10px;
     color: yellow;
 }
 
-/* Loading */
 #loading {
     animation: blink 1s infinite;
 }
@@ -128,7 +119,6 @@ button:active {
     display: none;
 }
 
-/* Animations */
 @keyframes fadeIn {
     from {opacity: 0;}
     to {opacity: 1;}
