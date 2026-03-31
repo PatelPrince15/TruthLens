@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Dashboard</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<div class="nav">
+    <a href="dashboard.html">Home</a>
+    <a href="history.html">History</a>
+    <a href="stats.html">Stats</a>
+</div>
+
+<div class="container">
+    <h1>🕵️ TruthLens</h1>
+
+    <textarea id="textInput" placeholder="Type your statement..."></textarea>
+
+    <div class="buttons">
+        <button onclick="detectLie()">Detect</button>
+        <button onclick="resetText()" class="reset">Reset</button>
+    </div>
+
+    <p id="loading" class="hidden">🤖 Analyzing...</p>
+
+    <div class="meter">
+        <div class="fill" id="fillBar"></div>
+    </div>
+
+    <p id="result"></p>
+    <p id="highlight"></p>
+</div>
+
+<script src="script.js"></script>
+</body>
+</html>
