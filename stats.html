@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>TruthLens - Stats</title>
+  <link rel="stylesheet" href="style.css">
+  <script src="script.js" defer></script>
+</head>
+<body class="gradient-bg" onload="loadStats()">
+
+  <!-- Navbar -->
+  <nav class="navbar">
+    <div class="nav-left">🔍 TruthLens</div>
+    <div class="nav-right">
+      <a href="index.html" class="nav-btn">Home</a>
+      <a href="dashboard.html" class="nav-btn">Dashboard</a>
+      <a href="history.html" class="nav-btn">History</a>
+      <a href="stats.html" class="nav-btn">Stats</a>
+      <button class="nav-btn" onclick="logout()">Logout</button>
+    </div>
+  </nav>
+
+  <!-- Main Content -->
+  <div class="container fade-in">
+    <h2>📊 Analytics Dashboard</h2>
+    <p>Total Users: <span id="userCount"></span></p>
+    <p>Total Lie Checks: <span id="checkCount"></span></p>
+    <p>Estimated Accuracy: <span id="accuracy"></span></p>
+  </div>
+
+  <!-- Footer -->
+  <footer class="footer">
+    <p>© 2026 TruthLens | Educational Simulation Project</p>
+  </footer>
+
+</body>
+</html>
