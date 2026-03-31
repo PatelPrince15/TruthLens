@@ -1,25 +1,39 @@
-function detectLie() {
-    let text = document.getElementById("textInput").value.toLowerCase();
-    let resultBox = document.getElementById("result");
+function handleLogin(event) {
+  event.preventDefault();
+  
+  alert("Login successful! Welcome to TruthLens.");
 
-    let suspiciousWords = ["honestly", "trust me", "believe me", "i swear"];
-    let score = 0;
-
-    suspiciousWords.forEach(word => {
-        if (text.includes(word)) {
-            score += 30;
-        }
-    });
-
-    if (text.length > 100) score += 20;
-    if (text.length < 20) score += 10;
-
-    // Final result
-    let result = score > 50 ? "⚠️ Lie Likely" : "✅ Truth Likely";
-    resultBox.innerText = result + " (" + score + "%)";
+  window.location.href = "history.html";
 }
 
-function resetText() {
-    document.getElementById("textInput").value = "";
-    document.getElementById("result").innerText = "";
+function loadHistory() {
+  const list = document.getElementById("historyList");
+  if(list) {
+    list.innerHTML = "<p>No history available (storage disabled).</p>";
+  }
+}
+
+function clearHistory() {
+  const list = document.getElementById("historyList");
+  if(list) {
+    list.innerHTML = "<p>No history available (storage disabled).</p>";
+  }
+}
+
+function loadStats() {
+  if(document.getElementById("userCount")) {
+    document.getElementById("userCount").innerText = "N/A";
+  }
+  if(document.getElementById("checkCount")) {
+    document.getElementById("checkCount").innerText = "N/A";
+  }
+  if(document.getElementById("accuracy")) {
+    document.getElementById("accuracy").innerText = "Simulated 80%";
+  }
+}
+
+
+function logout() {
+  alert("You have been logged out.");
+  window.location.href = "index.html";
 }
