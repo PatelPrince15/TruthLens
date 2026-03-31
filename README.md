@@ -1,8 +1,5 @@
 TruthLens – How True Is Your Statement?
 
-Live Demo
-👉 https://your-project-name.vercel.app
-
 What is TruthLens?
 TruthLens is a lightweight web app that gives your statements a **truth score**.  
 Instead of a boring true/false answer, it estimates **how truthful something sounds** in percentage form.
