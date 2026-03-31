@@ -1,0 +1,146 @@
+body {
+    font-family: Arial;
+    background: linear-gradient(135deg, #141e30, #243b55);
+    color: white;
+    text-align: center;
+    padding: 40px;
+}
+
+/* Container */
+.container {
+    width: 60%;
+    margin: auto;
+    animation: fadeIn 1s ease-in-out;
+}
+
+/* Heading */
+h1 {
+    font-size: 40px;
+    animation: slideDown 1s ease;
+}
+
+/* Input */
+input, textarea {
+    width: 100%;
+    padding: 10px;
+    border-radius: 10px;
+    border: none;
+    margin-top: 10px;
+    font-size: 16px;
+    transition: 0.3s;
+}
+
+input:focus, textarea:focus {
+    outline: none;
+    box-shadow: 0 0 10px #ff416c;
+}
+
+/* Buttons */
+button {
+    padding: 10px 20px;
+    margin: 10px;
+    border: none;
+    border-radius: 8px;
+    background: linear-gradient(45deg, #ff4b2b, #ff416c);
+    color: white;
+    cursor: pointer;
+    transition: 0.3s;
+}
+
+button:hover {
+    transform: translateY(-3px) scale(1.05);
+    box-shadow: 0 10px 20px rgba(0,0,0,0.3);
+}
+
+button:active {
+    transform: scale(0.95);
+}
+
+.reset {
+    background: gray;
+}
+
+/* Navbar */
+.nav {
+    background: rgba(0,0,0,0.6);
+    padding: 12px;
+    backdrop-filter: blur(10px);
+}
+
+.nav a {
+    color: white;
+    margin: 10px;
+    text-decoration: none;
+    position: relative;
+}
+
+.nav a::after {
+    content: "";
+    width: 0%;
+    height: 2px;
+    background: #ff416c;
+    position: absolute;
+    left: 0;
+    bottom: -5px;
+    transition: 0.3s;
+}
+
+.nav a:hover::after {
+    width: 100%;
+}
+
+/* Meter */
+.meter {
+    width: 100%;
+    height: 20px;
+    background: #ddd;
+    border-radius: 10px;
+    margin-top: 20px;
+    overflow: hidden;
+}
+
+.fill {
+    height: 100%;
+    width: 0%;
+    border-radius: 10px;
+    transition: width 0.8s ease-in-out;
+}
+
+/* Result */
+#result {
+    margin-top: 20px;
+    font-size: 22px;
+    font-weight: bold;
+}
+
+/* Highlight */
+#highlight {
+    margin-top: 10px;
+    color: yellow;
+}
+
+/* Loading */
+#loading {
+    animation: blink 1s infinite;
+}
+
+.hidden {
+    display: none;
+}
+
+/* Animations */
+@keyframes fadeIn {
+    from {opacity: 0;}
+    to {opacity: 1;}
+}
+
+@keyframes slideDown {
+    from {transform: translateY(-50px); opacity: 0;}
+    to {transform: translateY(0); opacity: 1;}
+}
+
+@keyframes blink {
+    0% {opacity: 0.2;}
+    50% {opacity: 1;}
+    100% {opacity: 0.2;}
+}
